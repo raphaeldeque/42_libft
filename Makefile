@@ -1,4 +1,7 @@
-SRCS	= ft_isalpha.c
+SRCS	=	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c \
+			ft_isprint.c 
+
+MAIN	=	main.c		
 
 OBJS	= ${SRCS:.c=.o}
 
@@ -11,11 +14,14 @@ CFLAGS	= -Wall -Werror -Wextra
 
 ${NAME}:	${OBJS}
 			ar -rcs ${NAME} ${OBJS}
+			
+.c.o:
+			${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
 all:		${NAME}
 
 clean:
-			${RM} ${OBJS}
+			${RM} ${OBJS} 
 
 fclean:		clean
 			${RM} ${NAME}
@@ -24,4 +30,10 @@ re:			fclean all
 
 bonus:
 
-.PHONY:		all clean fclean re bonus
+test:		${NAME}
+			${CC} ${CFLAGS} -L. -lft ${MAIN}
+			./a.out
+			rm a.out
+#			norminette ${SRCS}
+
+.PHONY:		all clean fclean re bonus test
