@@ -1,5 +1,5 @@
 SRCS	=	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c \
-			ft_isprint.c 
+			ft_isprint.c ft_strlen.c
 
 MAIN	=	main.c		
 
@@ -30,7 +30,7 @@ re:			fclean all
 
 bonus:
 
-test:		${NAME}
+test:		${OBJS} ${NAME}
 			${CC} ${CFLAGS} -L. -lft ${MAIN}
 			./a.out
 			rm a.out
