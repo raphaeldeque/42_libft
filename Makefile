@@ -1,5 +1,6 @@
 SRCS	=	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c \
-			ft_isprint.c ft_strlen.c
+			ft_isprint.c ft_strlen.c ft_memset.c ft_bzero.c \
+			ft_memcpy.c
 
 MAIN	=	main.c		
 
@@ -30,10 +31,10 @@ re:			fclean all
 
 bonus:
 
-test:		${OBJS} ${NAME}
+test:		${NAME}
 			${CC} ${CFLAGS} -L. -lft ${MAIN}
 			./a.out
 			rm a.out
-#			norminette ${SRCS}
+			norminette ${SRCS} libft.h
 
 .PHONY:		all clean fclean re bonus test
