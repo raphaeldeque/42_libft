@@ -6,11 +6,11 @@
 /*   By: rmoura-r <rmoura-r@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 02:33:54 by rmoura-r          #+#    #+#             */
-/*   Updated: 2022/05/13 19:53:27 by rmoura-r         ###   ########.fr       */
+/*   Updated: 2022/06/08 18:58:51 by rmoura-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {
