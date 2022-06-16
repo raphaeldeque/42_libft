@@ -1,19 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rmoura-r <rmoura-r@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/14 21:39:31 by rmoura-r          #+#    #+#             */
-/*   Updated: 2022/06/15 21:01:50 by rmoura-r         ###   ########.fr       */
+/*   Created: 2022/06/15 21:03:35 by rmoura-r          #+#    #+#             */
+/*   Updated: 2022/06/15 21:20:41 by rmoura-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(const char *s, int c)
+#include "libft.h"
+
+char	*ft_strrchr(const char *s, int c)
 {
+	s += ft_strlen(s);
 	while (*s != c)
-		if (!*s++)
+		if (!*--s)
 			return (0);
 	return ((char *)s);
 }
@@ -26,11 +29,12 @@ int	main(void)
 	char	test[] = "cabana azul";
 	char	*res;
 	char	*resft;
-	char	c = 'P';
+	char	c = 'b';
 	
-	res = strchr(test, c);
-	resft = ft_strchr(test, c);
+	res = strrchr(test, c);
+	resft = ft_strrchr(test, c);
 	printf("orig: %s\n", res);
 	printf(" ft_: %s\n", resft);
 
-} */
+}
+ */
