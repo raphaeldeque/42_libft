@@ -6,7 +6,7 @@
 /*   By: rmoura-r <rmoura-r@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 02:33:54 by rmoura-r          #+#    #+#             */
-/*   Updated: 2022/06/09 16:29:26 by rmoura-r         ###   ########.fr       */
+/*   Updated: 2022/06/17 18:05:26 by rmoura-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	while (len --)
+	while (len--)
 		*(char *)b++ = c;
 	return (b);
 }

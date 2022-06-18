@@ -1,36 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rmoura-r <rmoura-r@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/14 21:39:31 by rmoura-r          #+#    #+#             */
-/*   Updated: 2022/06/15 21:48:06 by rmoura-r         ###   ########.fr       */
+/*   Created: 2022/06/16 20:58:10 by rmoura-r          #+#    #+#             */
+/*   Updated: 2022/06/17 18:35:14 by rmoura-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(const char *s, int c)
+#include "libft.h"
+
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	while (*s != c)
-		if (!*s++)
-			return (0);
-	return ((char *)s);
+	while (*(unsigned char *)s && n--)
+		if (*(unsigned char *)s++ == (unsigned char)c)
+			return ((void *)--s);
+	return (0);
 }
 
 /* #include <string.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 int	main(void)
 {
-	char	test[] = "cabana azul";
+	char	*test1;// = "cabana azul";
 	char	*res;
 	char	*resft;
-	char	c = 'P';
+	int		c;
 	
-	res = strchr(test, c);
-	resft = ft_strchr(test, c);
-	printf("orig: %s\n", res);
-	printf(" ft_: %s\n", resft);
-
-} */
+	test1 = malloc(12);
+	test1 = "cabana azul";
+	c = -1;
+	while (++c < 150)
+	{
+		res = memchr(test1, c, 9);
+		resft = ft_memchr(test1, c, 9);
+		printf("c: %c\norig: %s\n", c, res);
+		printf(" ft_: %s\n\n", resft);
+	}
+	
+}
+	   
+ */
