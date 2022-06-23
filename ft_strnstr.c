@@ -6,7 +6,7 @@
 /*   By: rmoura-r <rmoura-r@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 21:22:12 by rmoura-r          #+#    #+#             */
-/*   Updated: 2022/06/18 20:28:28 by rmoura-r         ###   ########.fr       */
+/*   Updated: 2022/06/22 17:40:05 by rmoura-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,12 +42,12 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 int	main(void)
 {
 	const char	test1[] = "cabana azul, banana doce";
-	const char	test2[] = "banana";
+	const char	test2[] = "azul";
 	char	*res;
 	char	*resft;
 	
-	res = strnstr(test1, test2, strlen(test1));
-	resft = ft_strnstr(test1, test2, strlen(test1));
+	res = strnstr(test1, test2, 15);
+	resft = ft_strnstr(test1, test2, 15);
 	printf("orig: %s\n", res);
 	printf(" ft_: %s\n", resft);
 } */
