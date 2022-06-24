@@ -6,7 +6,7 @@
 /*   By: rmoura-r <rmoura-r@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 17:03:48 by rmoura-r          #+#    #+#             */
-/*   Updated: 2022/06/23 18:15:25 by rmoura-r         ###   ########.fr       */
+/*   Updated: 2022/06/23 21:28:24 by rmoura-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,5 +44,6 @@ char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 #endif

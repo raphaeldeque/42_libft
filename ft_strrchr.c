@@ -6,7 +6,7 @@
 /*   By: rmoura-r <rmoura-r@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/15 21:03:35 by rmoura-r          #+#    #+#             */
-/*   Updated: 2022/06/15 21:20:41 by rmoura-r         ###   ########.fr       */
+/*   Updated: 2022/06/24 14:58:43 by rmoura-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strrchr(const char *s, int c)
 {
 	s += ft_strlen(s);
-	while (*s != c)
+	while (*s != (unsigned char)c)
 		if (!*--s)
 			return (0);
 	return ((char *)s);

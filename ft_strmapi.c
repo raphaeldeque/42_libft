@@ -1,38 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rmoura-r <rmoura-r@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/14 21:39:31 by rmoura-r          #+#    #+#             */
-/*   Updated: 2022/06/24 14:57:31 by rmoura-r         ###   ########.fr       */
+/*   Created: 2022/06/23 21:27:44 by rmoura-r          #+#    #+#             */
+/*   Updated: 2022/06/24 14:30:06 by rmoura-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-char	*ft_strchr(const char *s, int c)
+/* char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	while (*s != (unsigned char)c)
-		if (!*s++)
-			return (NULL);
-	return ((char *)s);
-}
-
-/* #include <string.h>
-#include <stdio.h>
-
-int	main(void)
-{
-	char	test[] = "cabana azul";
-	char	*res;
-	char	*resft;
-	char	c = 'P';
 	
-	res = strchr(test, c);
-	resft = ft_strchr(test, c);
-	printf("orig: %s\n", res);
-	printf(" ft_: %s\n", resft);
-
 } */
