@@ -6,7 +6,7 @@
 /*   By: rmoura-r <rmoura-r@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 21:12:25 by rmoura-r          #+#    #+#             */
-/*   Updated: 2022/06/23 17:55:20 by rmoura-r         ###   ########.fr       */
+/*   Updated: 2022/06/24 17:47:46 by rmoura-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +15,25 @@
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*cat;
-	int		len;
+	size_t	len1;
+	size_t	len2;
 
-	if (!s1 || !s2)
-		return (NULL);
-	len = ft_strlen(s1) + ft_strlen(s2);
-	cat = malloc(sizeof(char) * len + 1);
+	len1 = ft_strlen(s1);
+	len2 = ft_strlen(s2);
+	cat = malloc(sizeof(char) * (len1 + len2 + 1));
 	if (!cat)
 		return (NULL);
-	ft_strlcat(cat, s1, ft_strlen(s1) + 1);
-	ft_strlcat(cat, s2, len + 1);
+	ft_memcpy(cat, s1, len1);
+	ft_memcpy(cat + len1 , s2, len2);
+	cat[len1 + len2] = '\0';
 	return (cat);
 }
 
 /* #include <stdio.h>
 #include <string.h>
+
+	//if (!s1 || !s2)
+	//	return (NULL);
 
 int main(void)
 {
