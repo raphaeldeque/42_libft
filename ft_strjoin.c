@@ -6,7 +6,7 @@
 /*   By: rmoura-r <rmoura-r@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 21:12:25 by rmoura-r          #+#    #+#             */
-/*   Updated: 2022/06/22 22:08:27 by rmoura-r         ###   ########.fr       */
+/*   Updated: 2022/06/23 17:55:20 by rmoura-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (!s1 || !s2)
 		return (NULL);
 	len = ft_strlen(s1) + ft_strlen(s2);
-	cat = malloc(sizeof(char *) * len + 1);
+	cat = malloc(sizeof(char) * len + 1);
 	if (!cat)
 		return (NULL);
 	ft_strlcat(cat, s1, ft_strlen(s1) + 1);
@@ -33,8 +33,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 int main(void)
 {
-	char s1[] = "abcd6-----------------------yyyy0";
-	char s2[] = "528/-66--------000000000----6611__++";
+	char *s1 = "abcd6-----------------------yyyy0";
+	char *s2 = "528/-66--------000000000----6611__++";
 	char s3[11];
 	
 	printf("\n%s\n\n", ft_strjoin(s1, s2));

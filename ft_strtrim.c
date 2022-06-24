@@ -6,7 +6,7 @@
 /*   By: rmoura-r <rmoura-r@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 22:09:25 by rmoura-r          #+#    #+#             */
-/*   Updated: 2022/06/23 16:30:37 by rmoura-r         ###   ########.fr       */
+/*   Updated: 2022/06/23 17:39:07 by rmoura-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,29 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	//char	*trimm;
-	int		len;
+	int	len;
 
 	if (!s1 || !set)
 		return (NULL);
-	s1 = ft_strchr(s1, set) + 1;
+	while (*s1 && ft_strchr(set, *s1))
+		s1++;
 	len = ft_strlen(s1);
-	while ()
-
+	while (len && ft_strchr(set, s1[len - 1]))
+		len--;
 	return (ft_substr(s1, 0, len));
-
-// substr remove o trecho do meio
-// strchr pela esq
-// strrchr pela dir
-		
-	
-	return (trimm);
 }
+
+/* #include <stdio.h>
+#include <string.h>
+
+int main(void)
+{
+	char s1[] = "12399bom dia 456 testando 78 som--9999123";
+	char s2[] = "123456789";
+	
+	printf("\n%s\n\n", ft_strtrim(s1, s2));
+
+//	printf("res: %i\ncat: %s\n", res, s3);
+
+}
+ */
