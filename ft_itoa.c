@@ -6,7 +6,7 @@
 /*   By: rmoura-r <rmoura-r@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 18:14:42 by rmoura-r          #+#    #+#             */
-/*   Updated: 2022/06/23 21:25:44 by rmoura-r         ###   ########.fr       */
+/*   Updated: 2022/06/29 17:54:30 by rmoura-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ char	*ft_itoa(int n)
 	int		len;
 
 	len = count_chars(n);
-	str = malloc(sizeof(char) * len + 1);
+	str = malloc(sizeof(char) * (len + 1));
 	if (!str)
 		return (NULL);
 	if (n == -2147483648)
