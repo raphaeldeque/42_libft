@@ -1,53 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rmoura-r <rmoura-r@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/23 21:27:44 by rmoura-r          #+#    #+#             */
-/*   Updated: 2022/06/28 17:53:21 by rmoura-r         ###   ########.fr       */
+/*   Created: 2022/06/28 17:57:55 by rmoura-r          #+#    #+#             */
+/*   Updated: 2022/06/28 19:22:32 by rmoura-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	unsigned int	i;
-	char			*res;
 
-	res = malloc(sizeof(char) * (ft_strlen(s) + 1));
-	if (!res)
-		return (NULL);
+	if (!s)
+		return ;
 	i = 0;
-	while (s[i] != '\0')
+	while (*s != '\0')
 	{
-		res[i] = f(i, s[i]);
+		f(i, s);
 		i++;
+		s++;
 	}
-	res[i] = '\0';
-	return (res);
 }
 
-/* char plus32(unsigned int i, char c)
+/* void	plus32(unsigned int i, char *str)
 {
 	if (i % 2 == 0)
-		return (c+32);
-	else
-		return (c);
+		*str += 32;
 }
 
 #include <stdio.h>
 
 int	main(void)
 {
-	char *str;
-	char *str2;
+	char str[] = "TEST ONE TWO THREE ABCD       ";
+	char str2[] = " TEST ONE TWO THREE ABCD       ";
 	
-	str = "TEST ONE TWO THREE ABCD       ";
-	str2 = " TEST ONE TWO THREE ABCD       ";
-	printf("%s\n", ft_strmapi(str, plus32));
-	printf("%s\n", ft_strmapi(str2, plus32));
+	printf("%s\n", str);
+	printf("%s\n", str2);
+	ft_striteri(str, plus32);
+	ft_striteri(str2, plus32);
+	printf("%s\n", str);
+	printf("%s\n", str2);
 	return (0);
 } */

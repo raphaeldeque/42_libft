@@ -6,7 +6,7 @@
 /*   By: rmoura-r <rmoura-r@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 02:33:54 by rmoura-r          #+#    #+#             */
-/*   Updated: 2022/06/08 20:25:21 by rmoura-r         ###   ########.fr       */
+/*   Updated: 2022/06/28 20:46:50 by rmoura-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	char		*dst_c;
 	const char	*src_c;
 
-	if (!dst)
+	if (!dst && !src)
 		return (dst);
 	dst_c = dst;
 	src_c = src;

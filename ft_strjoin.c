@@ -6,7 +6,7 @@
 /*   By: rmoura-r <rmoura-r@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 21:12:25 by rmoura-r          #+#    #+#             */
-/*   Updated: 2022/06/24 17:47:46 by rmoura-r         ###   ########.fr       */
+/*   Updated: 2022/06/28 17:54:09 by rmoura-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (!cat)
 		return (NULL);
 	ft_memcpy(cat, s1, len1);
-	ft_memcpy(cat + len1 , s2, len2);
+	ft_memcpy(cat + len1, s2, len2);
 	cat[len1 + len2] = '\0';
 	return (cat);
 }
