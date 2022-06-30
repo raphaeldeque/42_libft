@@ -6,7 +6,7 @@
 /*   By: rmoura-r <rmoura-r@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 17:40:38 by rmoura-r          #+#    #+#             */
-/*   Updated: 2022/06/23 18:14:14 by rmoura-r         ###   ########.fr       */
+/*   Updated: 2022/06/30 16:22:53 by rmoura-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,8 @@ char	**ft_split(char const *s, char c)
 	char	**res;
 	int		cells;
 
+	if (!s)
+		return (NULL);
 	cells = ft_n_cell(s, c);
 	res = malloc(sizeof(char *) * (cells + 1));
 	if (!res)
@@ -71,24 +73,3 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	return (res);
 }
-
-/* #include <stdio.h>
-
-int	main(void)
-{
-	char	*str = "laranjabahia na promocao";
-	char	sep = 'r';
-	char	**res = ft_split(str, sep);
-	int		i;
-
-	i = 0;
-	while (res[i] != NULL)
-	{
-		printf("tab[%i]:%s\n",i,res[i]);
-		i++;
-	}
-	printf("__[%i]:%s\n",i,res[i]);
-	// i++;
-	// printf("tab[%i]:%s\n",i,res[i]);
-	return (0);
-} */

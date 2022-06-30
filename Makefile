@@ -8,7 +8,6 @@ SRCS	=	ft_isalpha.c	ft_isdigit.c	ft_isalnum.c	ft_isascii.c	\
 			ft_strmapi.c	ft_striteri.c	ft_putchar_fd.c	ft_putstr_fd.c	\
 			ft_putendl_fd.c	ft_putnbr_fd.c
 
-
 OBJS	= ${SRCS:.c=.o}
 
 NAME	= libft.a
@@ -34,4 +33,4 @@ fclean:		clean
 
 re:			fclean all
 
-.PHONY:		all clean fclean re bonus test
+.PHONY:		all clean fclean re

@@ -6,7 +6,7 @@
 /*   By: rmoura-r <rmoura-r@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 19:24:12 by rmoura-r          #+#    #+#             */
-/*   Updated: 2022/06/28 20:12:54 by rmoura-r         ###   ########.fr       */
+/*   Updated: 2022/06/29 21:35:40 by rmoura-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,3 @@ void	ft_putnbr_fd(int n, int fd)
 	x = n % 10 + '0';
 	ft_putchar_fd(x, fd);
 }
-
-/* int main(void)
-{
-	ft_putnbr_fd(2147483647, 1);
-	ft_putchar_fd('\n', 1);
-} */

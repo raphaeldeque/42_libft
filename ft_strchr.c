@@ -6,7 +6,7 @@
 /*   By: rmoura-r <rmoura-r@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/14 21:39:31 by rmoura-r          #+#    #+#             */
-/*   Updated: 2022/06/24 14:57:31 by rmoura-r         ###   ########.fr       */
+/*   Updated: 2022/06/29 21:37:03 by rmoura-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,20 +19,3 @@ char	*ft_strchr(const char *s, int c)
 			return (NULL);
 	return ((char *)s);
 }
-
-/* #include <string.h>
-#include <stdio.h>
-
-int	main(void)
-{
-	char	test[] = "cabana azul";
-	char	*res;
-	char	*resft;
-	char	c = 'P';
-	
-	res = strchr(test, c);
-	resft = ft_strchr(test, c);
-	printf("orig: %s\n", res);
-	printf(" ft_: %s\n", resft);
-
-} */

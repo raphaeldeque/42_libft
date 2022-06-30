@@ -6,7 +6,7 @@
 /*   By: rmoura-r <rmoura-r@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 18:14:42 by rmoura-r          #+#    #+#             */
-/*   Updated: 2022/06/29 17:54:30 by rmoura-r         ###   ########.fr       */
+/*   Updated: 2022/06/29 21:31:39 by rmoura-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,18 +68,3 @@ char	*ft_itoa(int n)
 		write_nbr(str, n);
 	return (str);
 }
-
-/*  #include <stdio.h>
-
-int main(void)
-{
-	int i;
-
-	i = -10;
-
-	while (i++ < 10)
-	{
-		printf("i: %i\ta: %s\n", i, ft_itoa(i));
-	}
-	printf("a: %s\n", ft_itoa(-2147483648));
-} */

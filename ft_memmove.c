@@ -6,7 +6,7 @@
 /*   By: rmoura-r <rmoura-r@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 02:33:54 by rmoura-r          #+#    #+#             */
-/*   Updated: 2022/06/28 20:48:00 by rmoura-r         ###   ########.fr       */
+/*   Updated: 2022/06/29 21:33:55 by rmoura-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,33 +32,3 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		ft_memcpy(dst, src, len);
 	return (dst);
 }
-
-/* #include <stdio.h>
-#include <string.h>
-
-int main ()
-{
-  char str[] = "memmove can be very useful......";
-  ft_memmove(str+20,str+15,11);
-  puts (str);
-  return 0;
-}
-
-int	main(void)
-{
-	char	str[] = "teste123 abacaxi banana teste fim";
-//	char	dest01[20];
-//	char	dest01[20];
-//	char	*destft;
-//	destft = malloc(sizeof(char)*20 + 1);
-
-//	dest = {0};
-//	printf("dest01: %s\n", dest01);
-	memmove(str+18, str+10, 7);
-	ft_memmove(destft, str, 4);
-	printf("dest01: %s\n", dest01);
-	printf("destft: %s\n", destft);
-	
-	return (0);
-} 
- */

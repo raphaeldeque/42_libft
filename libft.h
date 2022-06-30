@@ -6,14 +6,13 @@
 /*   By: rmoura-r <rmoura-r@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 17:03:48 by rmoura-r          #+#    #+#             */
-/*   Updated: 2022/06/29 17:21:33 by rmoura-r         ###   ########.fr       */
+/*   Updated: 2022/06/30 18:17:48 by rmoura-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stddef.h>
 # include <stdlib.h>
 # include <unistd.h>
 

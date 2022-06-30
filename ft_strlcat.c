@@ -6,7 +6,7 @@
 /*   By: rmoura-r <rmoura-r@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/10 16:07:51 by rmoura-r          #+#    #+#             */
-/*   Updated: 2022/06/21 21:11:23 by rmoura-r         ###   ########.fr       */
+/*   Updated: 2022/06/29 21:38:30 by rmoura-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,29 +30,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst[j] = '\0';
 	return (ft_strlen(dst) + ft_strlen(&src[i]));
 }
-
-/* 
-#include <stdio.h>
-#include <string.h>
-
-
-int main(void)
-{
-	int res = 0;
-	int res2 = 0;
-	char s2[20] = "+-FGHIJKLMNOP";
-
-	int a = 0;
-
-	while (a++ < 20)
-	{
-		char s[20] = "ABCDE";
-		char s1[20] = "ABCDE";
-		
-		res = ft_strlcat(s, s2, a);
-		res2 = strlcat(s1, s2, a);
-		printf(" ft_: %s\t%i\n", s, res);
-		printf("orig: %s\t%i\n", s1, res2);
-	}
-
-} */
