@@ -6,7 +6,7 @@
 /*   By: rmoura-r <rmoura-r@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 19:24:12 by rmoura-r          #+#    #+#             */
-/*   Updated: 2022/06/30 16:29:19 by rmoura-r         ###   ########.fr       */
+/*   Updated: 2022/07/01 15:33:04 by rmoura-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	while (*s)
-		write(fd, s++, 1);
+	if (!s)
+		return ;
+	write(fd, s, ft_strlen(s));
 }
